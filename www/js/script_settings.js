@@ -12,6 +12,10 @@ function appStart()
     var export_notes = document.getElementById("export_notes"); //Uchwyt do buttona Exportuj notatki
     export_notes.addEventListener("click", f_export_notes, false);
 
+    let remove_notes = document.getElementById("remove_notes"); //Uchwyt do buttona Usun notatki
+    remove_notes.addEventListener("click", Note.removeLocalNotesCollection ,false);
+    remove_notes.addEventListener("click", function(){alert("Usunięto notatki")} ,false);
+
     
 }//................................................................................................
 //FUNKCJE ................................................................................
