@@ -3,7 +3,6 @@
     width:100%;
     margin: 0px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
-    overflow:hidden;
     background-color: #fafcf6;
 }
 button:focus {outline: none;}
