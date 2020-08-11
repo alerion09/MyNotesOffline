@@ -100,7 +100,7 @@ textarea
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size:25px;
+    font-size:22px;
 }
 #theme_green
 {
@@ -116,7 +116,7 @@ textarea
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size:25px;
+    font-size:22px;
 }
 .float_right
 {
@@ -124,7 +124,7 @@ textarea
 }
 .menu_options
 {
-    width:25%;
+    width:150px;
     background-color: #4CAF50;
     position:absolute;
     right:0;
