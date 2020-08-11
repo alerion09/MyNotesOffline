@@ -19,6 +19,12 @@ function change_theme()
             green_button[j].style.backgroundColor = 'rgb(76, 91, 175)';
         }
         document.getElementsByTagName("body")[0].style.backgroundColor= '#f6f6fc';
+        var menu_options = document.getElementsByClassName("menu_options");
+        var k;
+        for (k = 0; k < menu_options.length; k++) 
+        {
+            menu_options[k].style.backgroundColor = 'rgb(76, 91, 175)';
+        }
     }
     else if (color == "red")
     {
@@ -35,6 +41,12 @@ function change_theme()
             green_button[j].style.backgroundColor = "rgb(175, 76, 76)";
         }
         document.getElementsByTagName("body")[0].style.backgroundColor= '#fcf6f6';
+        var menu_options = document.getElementsByClassName("menu_options");
+        var k;
+        for (k = 0; k < menu_options.length; k++) 
+        {
+            menu_options[k].style.backgroundColor = 'rgb(175, 76, 76)';
+        }
     }
     else if (color == "pink")
     {
@@ -51,6 +63,12 @@ function change_theme()
             green_button[j].style.backgroundColor = "rgb(179, 87, 179)";
         }
         document.getElementsByTagName("body")[0].style.backgroundColor= '#fcf6fb';
+        var menu_options = document.getElementsByClassName("menu_options");
+        var k;
+        for (k = 0; k < menu_options.length; k++) 
+        {
+            menu_options[k].style.backgroundColor = 'rgb(179, 87, 179)';
+        }
     }
     else if (color == "black")
     {
@@ -67,5 +85,11 @@ function change_theme()
             green_button[j].style.backgroundColor = "rgb(34, 34, 34)";
         }
         document.getElementsByTagName("body")[0].style.backgroundColor= '#ffffff';
+        var menu_options = document.getElementsByClassName("menu_options");
+        var k;
+        for (k = 0; k < menu_options.length; k++) 
+        {
+            menu_options[k].style.backgroundColor = 'rgb(34, 34, 34)';
+        }
     }
 }
