@@ -1,6 +1,5 @@
 ﻿body
 {   
-    height:100%;
     width:100%;
     margin: 0px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
@@ -17,17 +16,15 @@ textarea
 {
     column-count: 2;
     gap: 2%;
-    
 }
 #container_notes
 {   
-    padding:5px;
+    padding: 3% 2% 0 2%;
     position:relative;
     z-index:1;
 }
 .added_note
 {   
-    float:left;
     border-radius: 5px;
     border-style:solid;
     border-width:1px;
