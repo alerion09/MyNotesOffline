@@ -1,5 +1,4 @@
 ﻿document.addEventListener("DOMContentLoaded", appStart)
-
 //FUNKCJA STARTOWA ................................................................................
 function appStart()
 {   
