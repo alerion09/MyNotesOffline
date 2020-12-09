@@ -1,49 +1,43 @@
 ﻿document.addEventListener("DOMContentLoaded", appStart)
-var id = (window.localStorage.getItem("id"));                                    //pobieranie id notatki z pamieci
-
+const id = (window.localStorage.getItem("id"));                                    //pobieranie id notatki z pamieci
+const local_notes_array = JSON.parse(window.localStorage.getItem("local_notes_array"));//Parsowanie i pobieranie tablicy z pamieci
 //FUNKCJA STARTOWA ................................................................................
 function appStart()
 {   
     change_theme();
+    document.getElementById("text").innerHTML = local_notes_array[id]; //Wczytanie tekstu notatki
 
-    var tablica_notatek_local = JSON.parse(window.localStorage.getItem("tablica_notatek_local")); //Parsowanie i pobieranie tablicy z pamieci
-    document.getElementById("text").innerHTML = tablica_notatek_local[id]; //Wczytanie tekstu notatki
-
-    var ok_button = document.getElementById("ok_button");     //uchwyt do przycisku Ok
-    var delete_button = document.getElementById("delete_button"); //uchwyt do przycisku Usun
-    var add_button = document.getElementById("add_button"); //uchwyt do przycisku Dodaj
+    const ok_button = document.getElementById("ok_button");     //uchwyt do przycisku Ok
+    const delete_button = document.getElementById("delete_button"); //uchwyt do przycisku Usun
+    const add_button = document.getElementById("add_button"); //uchwyt do przycisku Dodaj
 
     ok_button.addEventListener("click", f_change, false);
     add_button.addEventListener("click", f_change, false);
     delete_button.addEventListener("click", f_delete, false);
 }
 //................................................................................................
-
 //FUNKCJE-----------------------
 function f_change() // Funkcja edycji notatki
 {
-    var text = document.getElementById("text");
-    var zawartoscTekstu = text.value; 
+    const text = document.getElementById("text");
+    const zawartoscTekstu = text.value; 
     if(zawartoscTekstu == '') //Sprawdzenie czy wpisano treść notatki
     {
         alert("Notatka nie może być pusta");
     }else  
     {
-        var tablica_notatek_local = JSON.parse(window.localStorage.getItem("tablica_notatek_local")); //Parsowanie i pobieranie tablicy z pamieci
-        tablica_notatek_local[id] = zawartoscTekstu;        //Przypisanie zmienionej wartości tekstu do edytowanej notatki
-        var stringTablica_notatek_local = JSON.stringify(tablica_notatek_local); //Stringowanie tablicy
-        window.localStorage.setItem("tablica_notatek_local",stringTablica_notatek_local); //Zapisywaie tablicy do pamięci lokalnej
+        local_notes_array[id] = zawartoscTekstu;        //Przypisanie zmienionej wartości tekstu do edytowanej notatki
+        const stringlocal_notes_array = JSON.stringify(local_notes_array); //Stringowanie tablicy
+        window.localStorage.setItem("local_notes_array",stringlocal_notes_array); //Zapisywaie tablicy do pamięci lokalnej
         open_index();       //Otwarcie strony głównej
     }       
 }
 function f_delete() //Funkcja usuwania notatki
 { 
-    var tablica_notatek_local = JSON.parse(window.localStorage.getItem("tablica_notatek_local")); //Parsowanie i pobieranie tablicy z pamieci
-    tablica_notatek_local.splice(id, 1);   // Wycięcie notatki z tablicy
-    stringTablica_notatek_local = JSON.stringify(tablica_notatek_local); //Stringowanie tablicy
-    window.localStorage.setItem("tablica_notatek_local", stringTablica_notatek_local); // Zapisanie tablicy do pamięci lokalnej
-    open_index();
-    
+    local_notes_array.splice(id, 1);   // Wycięcie notatki z tablicy
+    stringlocal_notes_array = JSON.stringify(local_notes_array); //Stringowanie tablicy
+    window.localStorage.setItem("local_notes_array", stringlocal_notes_array); // Zapisanie tablicy do pamięci lokalnej
+    open_index();   
 }
 function open_index() //Funkcja otwierająca główną stronę
     {

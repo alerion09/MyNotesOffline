@@ -1,24 +1,21 @@
 ﻿document.addEventListener("DOMContentLoaded", appStart)
-
 //FUNKCJA STARTOWA ................................................................................
 function appStart()
 {
-
     is_logged_in();
     change_theme();
     //Uchwyty dp buttownów z motywami
-    var green_button = document.getElementById("theme_green");
+    const green_button = document.getElementById("theme_green");
     green_button.addEventListener("click", set_green_theme,false);
-    var blue_button = document.getElementById("theme_blue");
+    const blue_button = document.getElementById("theme_blue");
     blue_button.addEventListener("click", set_blue_theme,false);
-    var red_button = document.getElementById("theme_red");
+    const red_button = document.getElementById("theme_red");
     red_button.addEventListener("click", set_red_theme,false);
-    var pink_button = document.getElementById("theme_pink");
+    const pink_button = document.getElementById("theme_pink");
     pink_button.addEventListener("click", set_pink_theme,false);
-    var black_button = document.getElementById("theme_black");
+    const black_button = document.getElementById("theme_black");
     black_button.addEventListener("click", set_black_theme,false);
 }//................................................................................................
-
 function set_green_theme()
 {
     localStorage.removeItem("theme");
