@@ -11,8 +11,12 @@ function appStart()
     if (local_notes_array == null || local_notes_array == 0) //Sprawdzanie czy taablica nie jest pusta
     {   //Podmiana zawartości kontenera na wiadomość o braku notatek
         const container = document.getElementById("container_notes");
-        container.innerHTML = "<div style='text-align:center;color:#717171;; margin-top:50%;'>Brak notatek</div>";
         container.style.columnCount=1;
+        container.style.height='80%';
+        container.style.display='flex';
+        container.style.justifyContent='center';
+        container.style.alignItems='center';
+        container.innerHTML = "<div style='color:#717171;'>Brak notatek</div>";
     }else
     for ( let i = 0; i < local_notes_array.length; i++)
     {   //Lamanie wierszy

@@ -1,10 +1,17 @@
-﻿html
+﻿*
+{
+    box-sizing: border-box;
+}
+html
 {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
 body
 {   
+    height: 100%;
     width:100%;
     margin: 0;
     padding: 0;
@@ -18,16 +25,22 @@ textarea
     width:70%;
     height:300px;
 }
+#container
+{
+    height: 100%;
+    width: 100%;
+}
 .masonry
 {
     column-count: 2;
-    gap: 2%;
+    gap: 10px;
 }
 #container_notes
 {   
-    padding: 3% 2% 0 2%;
+    padding: 20px;
     position:relative;
     z-index:1;
+    width: 100%;
 }
 .added_note
 {   
@@ -38,7 +51,7 @@ textarea
     border-right-width:2px;
     border-color:rgb(229, 229, 229);
     background-color:white;
-    margin-top: 4%;
+    margin-top: 10px;
     padding: 10px 10px 10px 10px;
     color:#282727;
     font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
