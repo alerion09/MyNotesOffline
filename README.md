@@ -1,3 +1,4 @@
+> Early-stage project created before my commercial experience.
 # My Notes
 You can add, edit or delete your own notes in this app. App has five theme colors. 
 <br />
